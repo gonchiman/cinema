@@ -5,12 +5,29 @@
 <h1>Movies</h1>
 
 <div id="movies">
-  <% @movies.each do |movie| %>
-    <%= render movie %>
-    <p>
-      <%= link_to "Show this movie", movie %>
-    </p>
-  <% end %>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Release date</th>
+        <th>Show</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @movies.each do |movie| %>
+        <tr>
+          <td><%= movie.title %></td>
+          <td><%= movie.description %></td>
+          <td><%= movie.release_date %></td>
+          <td><%= link_to "Show", movie %></td>
+          <td><%= link_to "Edit", edit_movie_path(movie) %><td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
 
 <%= link_to "New movie", new_movie_path %>
