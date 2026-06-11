@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/new
   def new
-    @review = Review.new
+    @review = Review.new(movie_id: params[:movie_id])
   end
 
   # GET /reviews/1/edit

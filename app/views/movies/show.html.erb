@@ -42,7 +42,7 @@
 <div>
   <%= link_to "Edit this movie", edit_movie_path(@movie) %> |
   <%= link_to "Back to movies", movies_path %> |
-  <%= link_to "Create Review", new_review_path %>
+  <%= link_to "Create Review", new_review_path(movie_id: @movie.id) %>
 
   <%= button_to "Destroy this movie", @movie, method: :delete %>
 </div>
