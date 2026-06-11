@@ -1,3 +1,15 @@
+<style>
+  table {
+      border-collapse: collapse;
+  }
+
+  th, td {
+      border: 1px solid black;
+      padding: 8px 12px;
+      text-align: right;
+  }
+</style>
+
 <p style="color: green"><%= notice %></p>
 
 <% content_for :title, "Movies" %>
@@ -23,7 +35,7 @@
           <td><%= movie.description %></td>
           <td><%= movie.release_date %></td>
           <td><%= link_to "Show", movie %></td>
-          <td><%= link_to "Edit", edit_movie_path(movie) %><td>
+          <td><%= link_to "Edit", edit_movie_path(movie) %></td>
         </tr>
       <% end %>
     </tbody>
