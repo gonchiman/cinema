@@ -1,0 +1,76 @@
+# Ignore bundler config
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+
+# Ignore database files
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/db/*.sqlite3-shm
+/db/*.sqlite3-wal
+
+# Ignore generated files
+/public/system
+/public/uploads
+/storage/*
+!/storage/.keep
+
+# Ignore credentials and secrets
+/config/credentials.yml.enc
+/config/master.key
+
+# Ignore dotenv environment files
+.env
+.env.*
+
+# Ignore byproducts of editor/OS
+*.swp
+*.swo
+*~
+.DS_Store
+.idea
+.vscode
+
+# Ignore RubyMine
+*.iml
+
+# Ignore node modules and built assets
+/node_modules
+/yarn-error.log
+
+# Ignore testing and coverage files
+/coverage
+/spec/examples.txt
+
+# Ignore process and pid files
+/tmp/pids
+/pids
+
+# Ignore vendor bundles and caches
+/vendor/bundle
+/vendor/cache
+
+# Ignore bundler and gemfiles
+/*.gem
+
+# Ignore Rails and Ruby temporary files
+*.rbc
+*.sassc
+
+# Ignore public pack files if using webpack / js bundler
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-debug.log*
+/yarn-error.log*
+
+# Ignore byproducts from Spring
+/spring
+
+# Ignore credentials caches
+/*.rbc
+
+# Ignore config that may contain local secrets
+/config/credentials.yml
