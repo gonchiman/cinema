@@ -33,6 +33,7 @@
         <th>Average points</th>
         <th>Show</th>
         <th>Edit</th>
+        <th>New Review</th>
       </tr>
     </thead>
 
@@ -48,6 +49,7 @@
           </td>
           <td><%= link_to "Show", movie %></td>
           <td><%= link_to "Edit", edit_movie_path(movie) %></td>
+          <td><%= link_to "New Review", new_review_path(movie_id: movie.id) %></td>
         </tr>
       <% end %>
     </tbody>
