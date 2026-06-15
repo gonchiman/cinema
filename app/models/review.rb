@@ -8,4 +8,6 @@ class Review < ApplicationRecord
               greater_than: 0,
               less_than: 6
             }
+
+  validates :user, presence: true
 end
