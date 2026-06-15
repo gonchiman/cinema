@@ -65,6 +65,6 @@ class ReviewsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def review_params
-      params.expect(review: [ :content, :movie_id, :user_id ])
+      params.expect(review: [ :content, :movie_id, :user_id, :points ])
     end
 end
