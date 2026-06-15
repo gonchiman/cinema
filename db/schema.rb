@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_06_15_070904) do
+ActiveRecord::Schema[8.1].define(version: 2026_06_15_074834) do
   create_table "actors", force: :cascade do |t|
     t.date "birth_date"
     t.string "blood_type"
@@ -35,7 +35,9 @@ ActiveRecord::Schema[8.1].define(version: 2026_06_15_070904) do
     t.datetime "created_at", null: false
     t.integer "movie_id", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
     t.index ["movie_id"], name: "index_reviews_on_movie_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -57,5 +59,6 @@ ActiveRecord::Schema[8.1].define(version: 2026_06_15_070904) do
   end
 
   add_foreign_key "reviews", "movies"
+  add_foreign_key "reviews", "users"
   add_foreign_key "sessions", "users"
 end
