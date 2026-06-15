@@ -24,9 +24,9 @@
     <%= review.user.name %>
   </div>
 
-  <div>
+  <p>
     <strong>Points:</strong>
-    <%= review.points %>
-  </div>
+    <%= "★" * review.points.to_i %>
+  </p>
 
 </div>
