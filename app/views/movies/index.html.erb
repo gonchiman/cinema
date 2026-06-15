@@ -30,6 +30,7 @@
         <th>Title</th>
         <th>Description</th>
         <th>Release date</th>
+        <th>Average points</th>
         <th>Show</th>
         <th>Edit</th>
       </tr>
@@ -41,6 +42,10 @@
           <td><%= movie.title %></td>
           <td><%= movie.description %></td>
           <td><%= movie.release_date %></td>
+          <td>
+            <% average = movie.reviews.average(:points) %>
+            <%= average.present? ? average.round(1) : "No reviews" %>
+          </td>
           <td><%= link_to "Show", movie %></td>
           <td><%= link_to "Edit", edit_movie_path(movie) %></td>
         </tr>
