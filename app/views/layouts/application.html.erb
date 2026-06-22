@@ -24,6 +24,22 @@
   </head>
 
   <body>
+    <%
+      current_session = Session.find_by_id(cookies.signed[:session_id])
+    %>
+
+    <% if current_session %>
+      <p>
+        Logged in as <%= current_session.user.name %>
+        <%= button_to "Logout", session_path, method: :delete %>
+      </p>
+    <% else %>
+      <p>
+        Not logged in
+        <%= link_to "Login", new_session_path %>
+      </p>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

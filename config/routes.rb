@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'movies#index'
+
   resources :users
   resource :session
   resources :passwords, param: :token
